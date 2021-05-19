@@ -19,12 +19,12 @@ jobs:
           username: ${{ github.repository_owner }}
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: Get the version
-	id: get_version
-	run: echo ::set-output name=VERSION::${GITHUB_REF#refs/tags/}
+        id: get_version
+        run: echo ::set-output name=VERSION::${GITHUB_REF#refs/tags/}
       - name: Build container image
         uses: docker/build-push-action@v2
         with:
-	  context: .
+          context: .
           push: true
           tags: |
             ghcr.io/lyska-ug/docker-rabbitmq-dedublication/rabbitmq:latest

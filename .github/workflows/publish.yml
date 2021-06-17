@@ -27,5 +27,5 @@ jobs:
           context: .
           push: true
           tags: |
-            ghcr.io/lyska-ug/docker-rabbitmq-dedublication/rabbitmq:latest
-            ghcr.io/lyska-ug/docker-rabbitmq-dedublication/rabbitmq:${{ steps.get_version.outputs.VERSION }}
+            ghcr.io/lyska/docker-rabbitmq-dedublication/rabbitmq:latest
+            ghcr.io/lyska/docker-rabbitmq-dedublication/rabbitmq:${{ steps.get_version.outputs.VERSION }}
